@@ -1,2 +1,6 @@
-
+header ul {
+  justify-content: space-between;
+  list-style: none;
+  display: flex;
+}
 /*# sourceMappingURL=public.d91c94e1.css.map */

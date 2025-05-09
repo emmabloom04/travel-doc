@@ -22405,8 +22405,44 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 function Header() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: "Travel Doc"
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: "",
+                                alt: "logo",
+                                className: "logo"
+                            }, void 0, false, {
+                                fileName: "src/components/header.js",
+                                lineNumber: 8,
+                                columnNumber: 28
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/components/header.js",
+                            lineNumber: 8,
+                            columnNumber: 25
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/components/header.js",
+                        lineNumber: 8,
+                        columnNumber: 21
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        className: "site-title",
+                        children: "Travel Doc"
+                    }, void 0, false, {
+                        fileName: "src/components/header.js",
+                        lineNumber: 9,
+                        columnNumber: 21
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/header.js",
+                lineNumber: 7,
+                columnNumber: 17
+            }, this)
         }, void 0, false, {
             fileName: "src/components/header.js",
             lineNumber: 6,
