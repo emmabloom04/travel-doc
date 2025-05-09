@@ -680,10 +680,10 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactDom = require("react-dom");
 var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
-var _helloWorld = require("./components/HelloWorld");
-var _helloWorldDefault = parcelHelpers.interopDefault(_helloWorld);
+var _app = require("./app");
+var _appDefault = parcelHelpers.interopDefault(_app);
 (0, _reactDomDefault.default).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).StrictMode, {
-    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _helloWorldDefault.default), {}, void 0, false, {
+    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {}, void 0, false, {
         fileName: "src/index.js",
         lineNumber: 7,
         columnNumber: 7
@@ -699,7 +699,7 @@ var _helloWorldDefault = parcelHelpers.interopDefault(_helloWorld);
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom":"i4X7T","./components/HelloWorld":"eBpBS","@parcel/transformer-js/src/esmodule-helpers.js":"bAwRI","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"hDEnu"}],"dVPUn":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom":"i4X7T","./app":"2R06K","@parcel/transformer-js/src/esmodule-helpers.js":"bAwRI","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"hDEnu"}],"dVPUn":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -22335,12 +22335,12 @@ module.exports = require("713910055b34250f");
     exports.unstable_wrap = unstable_wrap;
 })();
 
-},{}],"eBpBS":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$044a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$044a.init();
+},{}],"2R06K":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$0bfa = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$0bfa.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$044a.prelude(module);
+$parcel$ReactRefreshHelpers$0bfa.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -22348,26 +22348,82 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-class HelloWorld extends (0, _reactDefault.default).Component {
-    render() {
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "Hello World!"
-            }, void 0, false, {
-                fileName: "src/components/HelloWorld.js",
-                lineNumber: 7,
+var _header = require("./components/header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
+var _content = require("./components/content");
+var _contentDefault = parcelHelpers.interopDefault(_content);
+var _footer = require("./components/footer");
+var _footerDefault = parcelHelpers.interopDefault(_footer);
+var _travelDocCss = require("./styles/travel-doc.css");
+function App() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
+                fileName: "src/app.js",
+                lineNumber: 10,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contentDefault.default), {}, void 0, false, {
+                fileName: "src/app.js",
+                lineNumber: 11,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
+                fileName: "src/app.js",
+                lineNumber: 12,
                 columnNumber: 13
             }, this)
-        }, void 0, false, {
-            fileName: "src/components/HelloWorld.js",
-            lineNumber: 6,
-            columnNumber: 10
-        }, this);
-    }
+        ]
+    }, void 0, true, {
+        fileName: "src/app.js",
+        lineNumber: 9,
+        columnNumber: 9
+    }, this);
 }
-exports.default = HelloWorld;
+_c = App;
+exports.default = App;
+var _c;
+$RefreshReg$(_c, "App");
 
-  $parcel$ReactRefreshHelpers$044a.postlude(module);
+  $parcel$ReactRefreshHelpers$0bfa.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./components/header":"be1w4","./components/content":"kblb1","./components/footer":"9XP3q","./styles/travel-doc.css":"69cy6","@parcel/transformer-js/src/esmodule-helpers.js":"bAwRI","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"hDEnu"}],"be1w4":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$3b5b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$3b5b.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3b5b.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+function Header() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+            children: "Travel Doc"
+        }, void 0, false, {
+            fileName: "src/components/header.js",
+            lineNumber: 6,
+            columnNumber: 13
+        }, this)
+    }, void 0, false, {
+        fileName: "src/components/header.js",
+        lineNumber: 5,
+        columnNumber: 9
+    }, this);
+}
+_c = Header;
+exports.default = Header;
+var _c;
+$RefreshReg$(_c, "Header");
+
+  $parcel$ReactRefreshHelpers$3b5b.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
@@ -24680,6 +24736,82 @@ function $da9882e673ac146b$var$ErrorOverlay() {
     return null;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"bAwRI"}]},["l3K7s","a0t4e"], "a0t4e", "parcelRequireee3f", {}, null, null, "http://localhost:1234")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"bAwRI"}],"kblb1":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$3868 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$3868.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3868.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+function Content() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            children: "Welcome to your personal travel journal, Travel Doc!"
+        }, void 0, false, {
+            fileName: "src/components/content.js",
+            lineNumber: 6,
+            columnNumber: 13
+        }, this)
+    }, void 0, false, {
+        fileName: "src/components/content.js",
+        lineNumber: 5,
+        columnNumber: 9
+    }, this);
+}
+_c = Content;
+exports.default = Content;
+var _c;
+$RefreshReg$(_c, "Content");
+
+  $parcel$ReactRefreshHelpers$3868.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"bAwRI","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"hDEnu"}],"9XP3q":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$3133 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$3133.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3133.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+function Footer() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("footer", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            children: "\xa9 2025 Travel Doc."
+        }, void 0, false, {
+            fileName: "src/components/footer.js",
+            lineNumber: 6,
+            columnNumber: 13
+        }, this)
+    }, void 0, false, {
+        fileName: "src/components/footer.js",
+        lineNumber: 5,
+        columnNumber: 9
+    }, this);
+}
+_c = Footer;
+exports.default = Footer;
+var _c;
+$RefreshReg$(_c, "Footer");
+
+  $parcel$ReactRefreshHelpers$3133.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"bAwRI","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"hDEnu"}],"69cy6":[function() {},{}]},["l3K7s","a0t4e"], "a0t4e", "parcelRequireee3f", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=public.31b563d9.js.map
