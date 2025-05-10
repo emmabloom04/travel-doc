@@ -1,5 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Tagesschrift&display=swap');
+:root {
+    --light-green: #D3FFAF;
+    --bright-green: #61D600;
+    --dark-green: #3E8900;
+    --light-purple: #D19DD6;
+    --dark-purple: #854E89;
+
+    --body-font: "Quicksand", sans-serif;
+    --heading-font: "Tagesschrift", system-ui;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+}
 header ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
+    background-color: var(--light-purple);
+    margin: 0;
+    padding: 10px;
+}
+header img {
+    width: 75px;
+    margin: 0 10px;
+}
+.site-title {
+    align-self: center;
+    margin: 0 10px;
+    font-family: var(--heading-font);
+    font-size: 1.7em;
+}
+.site-welcome {
+    font-size: 1.5em;
+}
+.trip-form {
+    padding: 25px;
+}
+.trip-location, .trip-description {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-family: var(--body-font);
+    font-size: 1.3em;
+}
+.trip-location {
+    width: 15ch;
+}
+.trip-description {
+    width: 18ch;
+}
+.trip-images {
+    width: 25ch;
+}
+.trip-form h2 {
+    font-family: var(--heading-font);
+    font-size: 2em;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 250px;
+}
+.form-buttons {
+    display: flex;
+    justify-content: center;
+}
+.add-trip, .cancel {
+    margin: 0 5px;
+}
+.button-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.new-trip, .add-trip, .trip-images, .cancel {
+   font: var(--body-font);
+   padding: 5px;
+   border-radius: 5px;
+}
+.new-trip, .add-trip, .trip-images {
+    background-color: var(--light-green);
+    border: var(--dark-green) 2px solid;
+}
+.trip-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+.trip-card {
+    background-color: var(--dark-purple);
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 2px 4px 8px 0 gray;
+    border-radius: 5px;
+}
+.trip-card img {
+    width: 100%;
+    border: 2px var(--light-purple) solid;
+    border-radius: 5px;
+}
+.image-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.no-trip {
+    grid-column: 2/3;
+}
+.new-trip {
+    margin: 0 15px;
+}
+footer, .site-welcome, .no-trip {
+    text-align: center;
 }

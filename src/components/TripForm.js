@@ -40,27 +40,34 @@ function TripForm({addTrip, cancel}) {
     return (
         <form onSubmit={handleSubmit} className="trip-form">
             <h2>Add a new trip</h2>
-            <input 
-                type="text"
-                placeholder="Trip location"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-                required
-            />
-            <input 
-                type="text"
-                placeholder="Trip description"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-            />
-            <input 
-                type="file"
-                accept="image/*"
-                multiple
-                onChange={handleFileChange}
-            />
-            <button type="submit">Add Trip</button>
-            <button type="button" onClick={cancel}>Cancel</button>
+            <div className="input-container">
+                <input 
+                    className="trip-location"
+                    type="text"
+                    placeholder="Trip location"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                    required
+                />
+                <textarea 
+                    className="trip-description"
+                    placeholder="Trip description"
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                    rows={4}
+                />
+                <input 
+                    className="trip-images"
+                    type="file"
+                    accept="image/*"
+                    multiple
+                    onChange={handleFileChange}
+                />
+            </div>
+            <div className="form-buttons">
+                <button className="add-trip" type="submit">Add Trip</button>
+                <button className="cancel" type="button" onClick={cancel}>Cancel</button>
+            </div>
         </form>
     )
 }

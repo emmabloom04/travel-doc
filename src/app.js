@@ -18,13 +18,15 @@ function App() {
         <div>
             <Header />
             <main>
-                <p>Welcome to your personal travel journal, Travel Doc!</p>
-                <button onClick={() => setIsAdding(true)}>Add Trip</button>
+                <p className="site-welcome">Welcome to your personal travel journal, Travel Doc!</p>
                 <TripList trips={trips} />
-            </main>
-            {isAdding && (
+                {isAdding && (
                 <TripForm addTrip={addTrip} cancel={() => setIsAdding(false)} />
-            )}
+                )}
+                <div className="button-container">
+                    <button className="new-trip" onClick={() => setIsAdding(true)}>Add New Trip</button>
+                </div>
+            </main>
             <Footer />
         </div>
     )
