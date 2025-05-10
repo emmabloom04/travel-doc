@@ -1,7 +1,68 @@
 import React, {useState} from 'react';
 
-function TripFrom({addTrip}) {
+function TripForm({addTrip, cancel}) {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [image, setImage] = useState('');
+    const [imageFiles, setImageFiles] = useState([]);
+
+    const handleFileChange = (e) => {
+        const files = Array.from(e.target.files);
+        
+        const promises = files.map((file) => {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onloadend = () => {
+                    resolve(reader.result);
+                };
+                reader.onerror = reject;
+                reader.readAsDataURL(file);
+            });
+        });
+        Promise.all(promises). then((images) => {
+            setImageFiles(images);
+        });
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // doesn't allow for an empty trip title
+        if (title.trim() == '') return;
+
+        addTrip({ title, description, images: imageFiles });
+
+        // clear form
+        setTitle('');
+        setDescription('');
+        setImageFiles([]);
+    }
+
+    return (
+        <form onSubmit={handleSubmit} className="trip-form">
+            <h2>Add a new trip</h2>
+            <input 
+                type="text"
+                placeholder="Trip location"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                required
+            />
+            <input 
+                type="text"
+                placeholder="Trip description"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+            />
+            <input 
+                type="file"
+                accept="image/*"
+                multiple
+                onChange={handleFileChange}
+            />
+            <button type="submit">Add Trip</button>
+            <button type="button" onClick={cancel}>Cancel</button>
+        </form>
+    )
 }
+
+export default TripForm;
