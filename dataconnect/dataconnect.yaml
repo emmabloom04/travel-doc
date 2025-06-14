@@ -1,0 +1,12 @@
+specVersion: "v1"
+serviceId: "travel-doc"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "travel-doc-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]
