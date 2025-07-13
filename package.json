@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "npx parcel public/index.html",
-    "build": "parcel build public/index.html --out-dir dist"
+    "build": "parcel build public/index.html --dist-dir dist"
   },
   "repository": {
     "type": "git",
