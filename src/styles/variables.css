@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Tagesschrift&display=swap');
+:root {
+    --light-green: #D3FFAF;
+    --bright-green: #61D600;
+    --dark-green: #3E8900;
+    --light-purple: #D19DD6;
+    --dark-purple: #854E89;
+
+    --body-font: "Quicksand", sans-serif;
+    --heading-font: "Tagesschrift", system-ui;
+}

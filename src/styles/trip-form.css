@@ -1,0 +1,47 @@
+.trip-form {
+    padding: 25px;
+}
+.trip-location, .trip-description {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-family: var(--body-font);
+    font-size: 1.3em;
+}
+.trip-location {
+    width: 15ch;
+}
+.trip-description {
+    width: 18ch;
+}
+.trip-form h2 {
+    font-family: var(--heading-font);
+    font-size: 2em;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 250px;
+}
+.form-buttons {
+    display: flex;
+    justify-content: center;
+}
+.add-trip, .cancel {
+    margin: 0 5px;
+}
+.button-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.new-trip, .add-trip, .cancel {
+   font: var(--body-font);
+   padding: 5px;
+   border-radius: 5px;
+}
+.new-trip, .add-trip {
+    background-color: var(--light-green);
+    border: var(--dark-green) 2px solid;
+}

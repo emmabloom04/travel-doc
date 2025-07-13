@@ -1,0 +1,13 @@
+@import "variables.css";
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--light-purple);
+    margin: 0;
+    padding: 10px;
+}
+header img {
+    width: 75px;
+    margin: 0 10px;
+}

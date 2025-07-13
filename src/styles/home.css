@@ -1,0 +1,40 @@
+@import "variables.css";
+.site-title {
+    align-self: center;
+    margin: 0 10px;
+    font-family: var(--heading-font);
+    font-size: 1.7em;
+}
+.site-welcome {
+    font-size: 1.5em;
+}
+.trip-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+.trip-card {
+    background-color: var(--dark-purple);
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 2px 4px 8px 0 gray;
+    border-radius: 5px;
+}
+.trip-card img {
+    width: 100%;
+    border: 2px var(--light-purple) solid;
+    border-radius: 5px;
+}
+.image-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.no-trip {
+    grid-column: 2/3;
+}
+.new-trip {
+    margin: 0 15px;
+}

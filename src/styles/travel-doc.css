@@ -177,9 +177,6 @@ header img {
 .trip-description {
     width: 18ch;
 }
-.trip-images {
-    width: 25ch;
-}
 .trip-form h2 {
     font-family: var(--heading-font);
     font-size: 2em;
@@ -202,12 +199,12 @@ header img {
     width: 100%;
     justify-content: flex-end;
 }
-.new-trip, .add-trip, .trip-images, .cancel {
+.new-trip, .add-trip, .cancel {
    font: var(--body-font);
    padding: 5px;
    border-radius: 5px;
 }
-.new-trip, .add-trip, .trip-images {
+.new-trip, .add-trip {
     background-color: var(--light-green);
     border: var(--dark-green) 2px solid;
 }
