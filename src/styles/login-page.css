@@ -22,18 +22,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full screen height */
-  background-color: #f0f4f8;
+  height: 100vh;
+  background-color: var(--off-white-background);
   min-height: 100vh;
   padding: 1rem;
   box-sizing: border-box;
 }
 
 .auth-form {
-  background-color: white;
+  background-color: var(--white-background);
   padding: 2rem 3rem;
   border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px var(--box-shadow-color);
   width: 100%;
   max-width: 300px;
   display: flex;
@@ -52,29 +52,11 @@
   display: block;
   width: 100%;
   padding: 0.75rem 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   font-size: 1rem;
   box-sizing: border-box;
   margin-bottom: 1rem;
-}
-
-.auth-form button {
-  width: 100%;
-  max-width: 300px;
-  padding: 0.75rem;
-  background-color: var(--dark-purple);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.auth-form button:hover {
-  background-color: var(--light-purple);
 }
 
 .auth-form p {
@@ -103,8 +85,8 @@
 .password-input-wrapper input {
   width: 100%;
   padding: 0.75rem 1rem;
-  padding-right: 2.5rem; /* Room for the eye icon */
-  border: 1px solid #ccc;
+  padding-right: 2.5rem;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   font-size: 1rem;
   box-sizing: border-box;
@@ -117,7 +99,7 @@
   transform: translateY(-63%);
   cursor: pointer;
   font-size: 1.25rem;
-  color: #444;
+  color: var(--icon-color);
   display: flex;
   align-items: center;
   justify-content: center;

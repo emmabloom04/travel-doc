@@ -5,6 +5,14 @@
     --dark-green: #3E8900;
     --light-purple: #D19DD6;
     --dark-purple: #854E89;
+    --off-white-background: #f0f4f8;
+    --white-background: white;
+    --border-color: #ccc;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    --icon-color: #444;
+    --dark-text-color: black;
+    --alert-red: rgb(189, 10, 10);
+    --alert-red-hover: rgb(225, 118, 118);
 
     --body-font: "Quicksand", sans-serif;
     --heading-font: "Tagesschrift", system-ui;

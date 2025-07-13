@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -7,6 +7,14 @@ import {
 } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebase";
+import {
+  collection,
+  query,
+  onSnapshot,
+  deleteDoc,
+  doc
+} from "firebase/firestore";
+import { auth, db } from "./firebase";
 
 import Header from "./components/header";
 import Footer from "./components/footer";
@@ -41,11 +49,34 @@ function PrivateRoute({ component: Component, ...rest }) {
 function HomePage() {
   const [trips, setTrips] = useState([]);
   const [isAdding, setIsAdding] = useState(false);
+  const [user] = useAuthState(auth);
 
-  const addTrip = (newTrip) => {
-    setTrips((prevTrips) => [...prevTrips, newTrip]);
-    setIsAdding(false);
-  };
+  useEffect(() => {
+    if (!user) return;
+
+    const tripsRef = collection(db, "users", user.uid, "trips");
+    const q = query(tripsRef);
+
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const tripsData = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setTrips(tripsData);
+    });
+
+    return () => unsubscribe();
+  }, [user]);
+
+  const handleDeleteTrip = async (tripId) => {
+  try {
+    const tripRef = doc(db, "users", user.uid, "trips", tripId);
+    await deleteDoc(tripRef);
+    console.log("Trip deleted:", tripId);
+  } catch (error) {
+    console.error("Error deleting trip:", error);
+  }
+};
 
   return (
     <div>
@@ -54,18 +85,16 @@ function HomePage() {
         <p className="site-welcome">
           Welcome to your personal travel journal, Travel Doc!
         </p>
-        <TripList trips={trips} />
-        {isAdding && (
-          <TripForm addTrip={addTrip} cancel={() => setIsAdding(false)} />
-        )}
-        <div className="button-container">
-          <button className="new-trip" onClick={() => setIsAdding(true)}>
-            Add New Trip
-          </button>
-        </div>
         <div className="button-container">
           <button className="sign-out" onClick={() => auth.signOut()}>
             Sign Out
+          </button>
+        </div>
+        <TripList trips={trips} onDelete={handleDeleteTrip} />
+        {isAdding && <TripForm cancel={() => setIsAdding(false)} />}
+        <div className="button-container">
+          <button className="new-trip" onClick={() => setIsAdding(true)}>
+            Add New Trip
           </button>
         </div>
       </main>
