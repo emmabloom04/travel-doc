@@ -29,6 +29,10 @@
   margin: 20px;
   box-shadow: 0 10px 20px var(--box-shadow-color);
   border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+.trip-card:hover {
+  transform: scale(1.03);
 }
 .trip-card-title,
 .trip-card-description,
