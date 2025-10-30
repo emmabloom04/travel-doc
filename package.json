@@ -33,6 +33,6 @@
     "@babel/preset-react": "^7.27.1",
     "@parcel/transformer-raw": "^2.14.4",
     "buffer": "^6.0.3",
-    "parcel": "^2.15.4"
+    "parcel": "^2.16.0"
   }
 }
